@@ -59,6 +59,10 @@ contract multiowned {
 		require(_owners.length >= _required);
 		m_numOwners = _owners.length;
 		for (uint i = 0; i < _owners.length; ++i) {
+			if (m_ownerIndex[uint(_owners[i])] != 0 || _owners[i] == 0) {
+				throw;
+			}
+
 			m_owners[1 + i] = uint(_owners[i]);
 			m_ownerIndex[uint(_owners[i])] = 1 + i;
 		}

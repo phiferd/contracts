@@ -1,5 +1,5 @@
-import {increaseTimeTo, duration} from './helpers/increaseTime.js';
-import {assertEvent, assertNoEvent} from "./helpers/assertEvent";
+import {increaseTimeTo, duration} from '../helpers/increaseTime.js';
+import {assertEvent, assertNoEvent} from '../helpers/assertEvent.js';
 
 const Promise = require("bluebird");
 const Wallet = artifacts.require("./Wallet.sol");
